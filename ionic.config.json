@@ -1,0 +1,8 @@
+{
+  "name": "Scare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "59397c1f"
+}
