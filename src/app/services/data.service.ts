@@ -6,78 +6,108 @@ export interface Message {
   date: string;
   id: number;
   read: boolean;
+  sinopse: string;
+  resumo: string;
+  linkcapa: string;
 }
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public messages: Message[] = [
+  public sinopses: Message[] = [
     {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
+      fromName: 'Pânico',
+      subject: 'Billy Loomis',
+      date: '1996',
       id: 0,
-      read: false
+      read: false,
+      sinopse: 'Meu favorito e até que antigo.',
+      resumo: 'Filme que começa com uma Stacey, um nerd, o namorado da Stacey e algum esteriótipo forçado que vão se mter onde não devem, passam a ser perseguidos por algum maluco, descobrem umas coisas estranhas e a maioria morre até o final, inclusive o assassino que é revelado na verdade estar vivo (pelo menos uma vez).',
+      linkcapa: 'assets/capas/panico.jpg'
     },
+
     {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
+      fromName: 'Halloween',
+      subject: 'Michael Myers',
+      date: '1978',
       id: 1,
-      read: false
+      read: false,
+      sinopse: 'Esse até que é especial para mim. Myers fez difrença na minha vida.',
+      resumo: 'Filme que começa com uma Stacey, um nerd, o namorado da Stacey e algum esteriótipo forçado que vão se mter onde não devem, passam a ser perseguidos por algum maluco, descobrem umas coisas estranhas e a maioria morre até o final, inclusive o assassino que é revelado na verdade estar vivo (pelo menos uma vez).',
+      linkcapa: 'assets/capas/halloween.jpg'
     },
     {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
+      fromName: 'Sexta-Feira 13: Parte 2',
+      subject: 'Jason Voorhees',
+      date: '1981',
       id: 2,
-      read: false
+      read: false,
+      sinopse: 'Sabia que o assassino do primeiro filme é a mãe do Jason, e não ele?',
+      resumo: 'Filme que começa com uma Stacey, um nerd, o namorado da Stacey e algum esteriótipo forçado que vão se mter onde não devem, passam a ser perseguidos por algum maluco, descobrem umas coisas estranhas e a maioria morre até o final, inclusive o assassino que é revelado na verdade estar vivo (pelo menos uma vez).',
+      linkcapa: 'assets/capas/sf13.jpg'
     },
     {
-      fromName: 'Bill Thomas',
-      subject: 'The situation',
-      date: 'Yesterday',
+      fromName: 'Hora do Pesadelo',
+      subject: 'Freddy Krueger',
+      date: '1984',
       id: 3,
-      read: false
+      read: false,
+      sinopse: '"EU SOU SEU NAMORADO AGORA, NANCY!"',
+      resumo: 'Filme que começa com uma Stacey, um nerd, o namorado da Stacey e algum esteriótipo forçado que vão se mter onde não devem, passam a ser perseguidos por algum maluco, descobrem umas coisas estranhas e a maioria morre até o final, inclusive o assassino que é revelado na verdade estar vivo (pelo menos uma vez).',
+      linkcapa: 'assets/capas/hdp.jpg'
     },
     {
-      fromName: 'Joanne Pollan',
-      subject: 'Updated invitation: Swim lessons',
-      date: 'Yesterday',
+      fromName: 'Ringu',
+      subject: 'Yamamura Sadako',
+      date: '1998',
       id: 4,
-      read: false
+      read: false,
+      sinopse: 'Sete dias, mas o que acontece se você deixar a tela da TV encostada no chão?',
+      resumo: 'A garotinha morta assombrando pessoas é clichê... mas o filme, nem tanto.',
+      linkcapa: 'assets/capas/ringu.jpg'
     },
     {
-      fromName: 'Andrea Cornerston',
-      subject: 'Last minute ask',
-      date: 'Yesterday',
+      fromName: 'Alien: O Oitavo Passageiro',
+      subject: 'Xenomorfo',
+      date: '1979',
       id: 5,
-      read: false
+      read: false,
+      sinopse: 'JONES!',
+      resumo: 'Alien inovou o cinema com terror espacial. O medo do desconhecido sempre foi reconhecido, mas aqui não há medo de um mascarado que o protagonista não sabe quem é ou quando pode atacar - mas sim de uma criatura desconhecida que pode estar atrás de você.',
+      linkcapa: 'assets/capas/alien.jpg'
     },
     {
-      fromName: 'Moe Chamont',
-      subject: 'Family Calendar - Version 1',
-      date: 'Last Week',
+      fromName: 'Jogos Mortais',
+      subject: 'Jigsaw',
+      date: '2005',
       id: 6,
-      read: false
+      read: false,
+      sinopse: "Lições importantes sobre valorizar a (própria) vida",
+      resumo: 'Um velho sem o que fazer sequestra drogados, viciados, suicidas e outros para jogarem "jogos" em que precisam cortar membros, matar e ter extrema frieza para sobreviver... tudo isso para valorizarem a vida. Esse velho não tinha mais o que fazer?',
+      linkcapa: 'assets/capas/jm.jpg'
     },
     {
-      fromName: 'Kelly Richardson',
-      subject: 'Placeholder Headhots',
-      date: 'Last Week',
+      fromName: 'Massacre da Serra Elétrica',
+      subject: 'Os Sawyer',
+      date: '1974',
       id: 7,
-      read: false
+      read: false,
+      sinopse: 'VRRRRRR VRRRRRRR VRRRRRDANRANRANRANRANRARNARANRANARNARN',
+      resumo: 'Filme que começa com uma Stacey, um nerd, o namorado da Stacey e algum esteriótipo forçado que vão se mter onde não devem, passam a ser perseguidos por algum maluco, descobrem umas coisas estranhas e a maioria morre até o final, inclusive o assassino que é revelado na verdade estar vivo (pelo menos uma vez).',
+      linkcapa: 'assets/capas/mdse.jpg'
     }
   ];
 
   constructor() { }
 
   public getMessages(): Message[] {
-    return this.messages;
+    return this.sinopses;
   }
 
   public getMessageById(id: number): Message {
-    return this.messages[id];
+    return this.sinopses[id];
   }
+
 }

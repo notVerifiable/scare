@@ -1,7 +1,10 @@
 {
   "name": "Scare",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular",
   "id": "59397c1f"
